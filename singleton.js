@@ -3,9 +3,13 @@ let instance;
 
 class Counter {
     constructor(){
-        if (!instance) instance = this;
+        if (typeof Counter.instance === 'object'){
+            return Counter.instance;
+        } instance = this;
+
         instance.count = 0;
-        return instance;
+        Counter.instance = this;
+        return this;
     }
 
     getCount() {
