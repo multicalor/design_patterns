@@ -1,3 +1,5 @@
+//  Абстрактная фабрика
+
 function bmwProduser(kind) {
   switch (kind) {
     case "sport":
